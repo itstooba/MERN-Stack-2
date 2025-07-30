@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+
+    <style>
+
+        *{
+            font-family: Roboto;
+        }
+        .card{
+            border: 2px solid rgb(151, 147, 147);
+            width: 20%;
+            padding: 30px;
+            box-sizing: border-box;
+            border-radius: 10px;
+            box-shadow: 3px 3px 5px 0 #0000007f;
+            background-color: white;
+            
+             
+
+        }
+
+        body{
+            background-image: url('https://img.pikbest.com/wp/202409/flower-potted-plants-monstera-home-plant-tree-in-minimalist-3d-scene-on-pastel-background_9628996.jpg!sw800');
+            background-position: center;
+            background-color: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .form-title{
+            text-align: center;
+        }
+
+        .text-input{
+            display: block;
+            width: 100%;
+            padding: 10px 15px;
+            box-sizing: content-box;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .submit-btn{
+            display: block;
+            background-color: blue;
+            color: white;
+            padding: 10px;
+            width: 100%;
+            border: none;
+            border-radius: 5px;
+       
+
+        }
+
+        .link{
+            display: block;
+            color: blueviolet;
+            text-decoration: none;
+        }
+
+        .forget-link{
+            text-align: right;
+            margin-bottom: 20px;
+        }
+
+        .register-link{
+            text-align: center;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        
+
+    </style>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic" rel="stylesheet" />
+
+
+
+
+</head>
+<body>
+
+    <div class="card">
+        <h1 class="form-title">Login Form</h1>
+        <form>
+            <label>Email Address</label>
+            <input type="email" class="text-input">
+
+            <label>Paasword</label>
+            <input type="password" class="text-input">
+
+            <a href="#" class="link forget-link">Forget Password</a>
+
+            <button class="submit-btn">Submit</button>
+
+            <a href="#" class="link rgister-link">Not Registered yet? Signup Here</a>
+
+            
+        </form>
+
+    </div>
+
+
+    
+</body>
+</html>

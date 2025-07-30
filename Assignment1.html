@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment1</title>
+    <style>
+        body{
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f8f9fc;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            padding: 40px 20px;   
+        }
+
+        .pricing-section{
+            max-width: 1000px;
+            text-align: center;
+        }
+
+        h2{
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .billing-toggle{
+            margin: 10px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .switch{
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height:34px;
+        }
+
+        .switch input{
+            opacity: 0;
+            width: 0;
+            height:0;
+        }
+
+        .slider{
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition:4s;
+            border-radius:34px;
+            
+        }
+
+        .slider::before{
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 26px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition:4s;
+            border-radius: 50%;
+        }
+
+        input:checked + .slider {
+            background-color: #2196f3;
+        }
+
+        input:checked + .slider::before {
+            transform: translateX(26px);
+        }
+
+        .plans{
+            display:flex;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .plan{
+            flex: 1;
+            min-width: 250px;
+            padding: 20px;
+            background: #f7f7f7;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0,0,0,0.05);
+        }
+
+        .featured{
+            border:2px solid #4f46e5;
+        }
+
+        .plan h3{
+            font-size: 1.5rem;
+            margin-top: 10px;
+        }
+
+        .price{
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .price span{
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+
+        .plan ul{
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+
+        .plan ul li{
+            margin: 8px 0;
+        }
+
+        .badge{
+            font-size: 0.7rem;
+            background: #eef;
+            padding: 2px 6px;
+            border-radius: 6px;
+            margin-left: 4px;
+            color: #555;
+            text-transform: uppercase;
+        }
+
+        button{
+            background-color: #4f46e5;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        button:disabled{
+            background-color: #ddd;
+            color: #aaa;
+            cursor: not-allowed;
+        }
+
+        select{
+            padding: 8px;
+            margin-bottom: 10px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+        }
+
+        .monthly-info{
+            text-align: left;
+            color: #5bc0de;
+            font-size: 14px;
+            margin: 10px 0 5px 0;
+            padding-left: 10px;
+        }
+
+        
+
+        .note{
+            margin-top: 20px;
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        .footernode{
+            margin-top: 30px;
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <section class="pricing-section">
+        <h2>Choose your plan</h2>
+        <p>
+            Be the first to know when boardmen launches.Early  access user will receive an extended free trial and early bird pricing option
+        </p>
+        <div class="billing-toggle">
+            <span>Billed monthly</span>
+            <label class="switch">
+                <input type="checkbox" />
+                <span class="slider"></span>
+            </label>
+            <span>Billed annually</span>
+        </div>
+        <div class="plans">
+            <div class="plan">
+                <h3>Free</h3>
+                <p class="price">$0</p>
+                <ul>
+                    <li>500 request</li>
+                    <li>Unlimted projects</li> 
+                    <li>extended free trial<span class="badge">for early user</span></li>
+                </ul>
+                <button disabled>Creat Account</button>
+            </div>
+            <div class="plan featured">
+                <h3>Standard</h3>
+                <p class="price">$99<span>/month</span></p>
+                <select>
+                    <option>2500 requests</option>
+                    <option>5000 request</option>
+                </select>
+                <p class="monthly-info">Moonthly active users</p>
+                <ul>
+                    <li>500 request</li>
+                    <li>Unlimited projects</li>
+                    <li>extended free trial <span class="bagde">for early user</span></li>
+                </ul>
+                <button>Create Account</button>
+            </div> 
+            <div class="plan">
+                <h3>Enterprise</h3>
+                <p class="price">Let's Talk!</p>
+                <ul>
+                    <li>500 request</li>
+                    <li>Unlimited projects</li>
+                    <li>extended free trial <span class="badge">for early user</span></li>
+                </ul>
+                <button disabled>Create Account</button>
+            </div> 
+        </div>
+        <p class="footernote">No credit card required</p>   
+    </section>
+</body>
+</html>
+                

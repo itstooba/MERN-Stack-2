@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Admission Form</title>
+</head>
+<body>
+
+    <h1>Student Admission Form</h1>
+    <form>
+        <label for="name">Student Name</label>
+        <input type="text" id="name" required minlenth="3" maxlength="20">
+        <br><br>
+
+        <label for="emailaddress">Email Address</label>
+        <input type="email" id="emailaddress" required>
+        <br><br>
+
+        <label for="email">Date od Birth</label>
+        <input type="date" id="dob">
+        <br><br>
+
+        <label for="">Address</label>
+        <textarea rows="5" cols="20"></textarea>
+        <br><br>
+
+        <label for="">Gender</label>
+        <input type="radio">Male
+        <input type="radio">Female
+        <br><br>
+
+
+        <label for="">Select Course</label>
+        <select>
+            <option>MERN Stack</option>
+            <option>Data Analytics</option>
+            <option>Cyber Security</option>
+            <option>Data Science</option>
+            <option>Flutter</option>
+        </select>
+        <br><br>
+
+        <label for="">College Name</label>
+        <input type="text" list="college">
+        <br><br>
+        
+
+        <datalist id="college">
+            <option>BBD</option>
+            <option>ITM</option>
+            <option>SRMU</option>
+            <option>Integral</option>
+            <option>Lu</option>
+        </datalist> 
+        <br><br>
+
+        <input type="checkbox" id="terns"> 
+        <label for="terms">I accept terms and conditions</label>
+        <br><br>
+
+        <details>
+            <summary>View terms and conditions</summary>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure corrupti perspiciatis harum vel est repellendus, assumenda reprehenderit illum soluta eos tempora at, sed in nihil consequuntur, culpa odio voluptatem adipisci?</p>
+        </details>
+        <br><br>
+
+        <button type="submit">Submit</button>
+        
+        
+    </form>
+    
+</body>
+</html>
+
+<!--type text is a default value hota hai 
+-->
