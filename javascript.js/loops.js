@@ -23,3 +23,18 @@ console.log();
     console.log(c);
     c++;
  }while(c>20);
+
+ 
+
+ 
+let num = 34562;
+let rev = 0;
+
+while(num>0){
+   console.log(num,rev)
+   let d = num%10;
+   rev = rev * 10 + d;
+   num = parseInt(num/10);
+}
+
+console.log(rev);
